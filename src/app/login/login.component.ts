@@ -1,4 +1,6 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-login',
@@ -10,9 +12,11 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+
+  }
 }
+
 
 
 
