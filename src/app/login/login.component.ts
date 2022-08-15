@@ -1,6 +1,8 @@
-import { NgIf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
 
+import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../services/login.service';
+import { user } from '../model/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+ Newuser = new user();
 
-  ngOnInit(): void {
+  constructor(private LoginService: LoginService, private router : Router) { }
 
+  ngOnInit(): void {}
 
+  auth(){
+    this.LoginService.authentifier(this.Newuser)
+    .subscribe(c => {
+    console.log(c);
+    });
   }
 }
 

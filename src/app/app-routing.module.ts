@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: "navbar", component: NavbarComponent },
   { path: "login", component: LoginComponent},
   {path: "accueil", component : AccueilComponent},
-  {path: "", redirectTo: "login", pathMatch: "full" }
+ // {path: "", redirectTo: "login", pathMatch: "full" }
 
 ];
 
