@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { FormGroup } from '@angular/forms';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddTicketComponent } from './add-ticket/add-ticket.component';
+import { AllticketsComponent } from './alltickets/alltickets.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     LoginComponent,
     AccueilComponent,
+    AddTicketComponent,
+    AllticketsComponent,
 
 
   ],
