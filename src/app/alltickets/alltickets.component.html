@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <div class="site-blocks-cover" style="background-image: url('assets/hayfa1.jpg');" >
-  <app-navbar>jjjj</app-navbar>
+  <app-navbar></app-navbar>
 
 <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
 <br>
@@ -40,30 +40,54 @@
         <i class="fas fa-search"></i>
       </button>
     </div>
-  <table class="table table-striped" >
-  <tr>
-       <th>Id Ticket</th>
-       <th>Titre</th>
-       <th>Priorité</th>
-       <th>Attribué à</th>
-       <th>Status</th>
-       <th>Description</th>
-       <th>Date Creation </th>
-       <th>Date Modification</th>
-       <th>Actions</th>
-
- </tr>
-  <tbody *ngFor="let medicament  ">
-  <tr >
-       <td>{{medicament.id}}</td>
-       <td>{{medicament.nom}}</td>
-       <td>{{medicament.prix}}</td>
-       <td>{{medicament.libelle }}</td>
-       <td><a class="btn btn-white" [routerLink]="['/updatemedicament',medicament.id]"><font color="blue"><b>Modifier</b></font></a></td>
-       <td><a class="btn btn-white" ><font color="red"><b>Supprimer</b></font></a></td>
-  </tr>
-  </tbody>
-  </table>
+    <table class="table" border="2">
+      <thead>
+        <tr>
+          <th ></th>
+          <th width="-8%" >Id</th>
+          <th  width="-8%" >Titre</th>
+          <th  width="-8%" >priorité</th>
+          <th width="-8%" >Attribué à</th>
+          <th  width="-8%" >Status</th>
+          <th  width="-8%" >Description</th>
+          <th width="-8%" >Dte Creation</th>
+          <th  width="-8%" >Dte Modif</th>
+          <th  width="-8%" >Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            </div>
+          </th>
+          <td>Sit</td>
+          <td>Amet</td>
+          <td>Consectetur</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            </div>
+          </th>
+          <td>Adipisicing</td>
+          <td>Elit</td>
+          <td>Sint</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            </div>
+          </th>
+          <td>Hic</td>
+          <td>Fugiat</td>
+          <td>Temporibus</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   </div>
 </div>
