@@ -3,7 +3,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <div class="site-blocks-cover" style="background-image: url('assets/hayfa1.jpg');" >
-  <app-navbar></app-navbar>
+<app-navbar></app-navbar>
+<label>_________________________________________________________________________________________________________________________________________</label>
 <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
 <br>
 <br>
@@ -26,23 +27,19 @@
   <div class="card shadow mb-4">
   <div class="card-body">
 
-     <h4><font color="blue" > Nouveau Ticket </font> </h4>
+    <h3><font color="blue" > Nouveau Ticket</font> </h3>
      <form >
-  <table class="table table-striped" >
+  <table class="table table-striped" border="2">
    <tr>
-    <th>Num Ticket</th>
-     <td><input type="text" name="numTicket" class="form-control"> </td>
-  </tr>
-   <tr>
-   <th> Title</th>
-    <td><input type="number"  name="title" class="form-control"> </td>
+   <th> Titre</th>
+    <td><input type="text"  name="title" class="form-control" > </td>
   </tr>
     <tr>
-     <th> Périority</th>
+     <th> Priorité</th>
       <td><input type="text"name="periorite" class="form-control"> </td>
     </tr>
     <tr>
-      <th> Attributed To  </th>
+      <th> Attribué à </th>
        <td><input type="text"name="attributedTo" class="form-control"> </td>
      </tr>
      <tr>
@@ -51,24 +48,22 @@
      </tr>
      <tr>
       <th> Description </th>
-       <td><input type="text"name="description" class="form-control"> </td>
+       <td><input type="text" name="description" class="form-control"> </td>
      </tr>
      <tr>
       <th> Dte Creation </th>
-       <td><input type="text"name="dtCreate" class="form-control"> </td>
+       <td><input type="date"name="dtCreate" class="form-control"> </td>
      </tr>
      <tr>
       <th> Dte Modif </th>
-       <td><input type="text"name="dtModif" class="form-control"> </td>
+       <td><input type="date"name="dtModif" class="form-control"> </td>
      </tr>
     </table>
-
-    <button type="submit" class="btn btnsuccess" > Ajouter</button>
+    <button  type="submit"  class="btn btn-outline-primary"  > Ajouter</button>
       </form>
   </div>
   </div>
 </div>
-
 <br>
 <br>
 <br>

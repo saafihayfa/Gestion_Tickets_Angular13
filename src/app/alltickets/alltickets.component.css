@@ -1,7 +1,7 @@
 div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
 
   left: 20px;
-  top: 70px;
+  top: 80px;
   line-height: 50%;
   background: #d5d5f7;
   }
@@ -26,7 +26,7 @@ div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
   div [class="input-group"]{
     position: absolute;
     top: 10%;
-    left: 62%;
+    left: 66%;
   }
 table{
   position: relative;
