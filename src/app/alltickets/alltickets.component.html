@@ -55,36 +55,21 @@
           <th  width="-8%" >Actions</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody  *ngFor="let ticket of tick  ">
         <tr>
           <th scope="row">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
             </div>
           </th>
-          <td>1</td>
-          <td>Amet</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-            </div>
-          </th>
-          <td>2</td>
-          <td>Elit</td>
-          <td>Sint</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-            </div>
-          </th>
-          <td>3</td>
-          <td>Fugiat</td>
-          <td>Temporibus</td>
+          <td>{{ticket.idTicket}}</td>
+          <td>{{ticket.title}}</td>
+          <td>{{ticket.periorite}}</td>
+          <td>{{ticket.attributedTo}}</td>
+          <td>{{ticket.status}}</td>
+          <td>{{ticket.description}}</td>
+          <td>{{ticket.dtCreate}}</td>
+          <td>{{ticket.dtModif}}</td>
         </tr>
       </tbody>
     </table>

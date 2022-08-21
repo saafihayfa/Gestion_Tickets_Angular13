@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ticket } from '../model/ticket.model';
+import { AllticketsService } from '../services/alltickets.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alltickets',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllticketsComponent implements OnInit {
 
-  constructor() { }
+  tick !:ticket[]  ;
+
+  constructor(private AllticketsService: AllticketsService, private router : Router) { }
 
   ngOnInit(): void {
+
+    this.AllticketsService.listerTicket().subscribe( data => {
+      this.tick=data
+      console.log(data);
+      } );
+
   }
 
 }
