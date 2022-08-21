@@ -1,8 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
+import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { user } from '../model/user.model';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +14,21 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
  Newuser = new user();
+ public loginForm! : FormGroup ;
 
-  constructor(private LoginService: LoginService, private router : Router) { }
+  constructor(private LoginService: LoginService,private http :HttpClient, private router : Router, private formBuilder : FormBuilder) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loginForm= this.formBuilder.group({
+      username:['',Validators.required],
+      password:['',Validators.required]
+     })
+  }
 
   auth(){
     this.LoginService.authentifier(this.Newuser)
     .subscribe(c => {
+      alert("vous etes bien connecté ");
     console.log(c);
     });
   }
