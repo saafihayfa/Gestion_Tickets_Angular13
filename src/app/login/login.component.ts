@@ -27,10 +27,12 @@ export class LoginComponent implements OnInit {
 
   auth(){
     this.LoginService.authentifier(this.Newuser)
-    .subscribe(c => {
+    .subscribe(c=> {
+      this.router.navigate(['accueil']);
       alert("vous etes bien connecté ");
     console.log(c);
     });
+
   }
 }
 

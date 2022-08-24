@@ -12,15 +12,18 @@ const httpOptions = {
 })
 export class AllticketsService {
 
+
   apiURL: string = 'http://localhost:8087/api/hdkticket' ;
 
   constructor(private http : HttpClient) { }
 
   listerTicket(): Observable<ticket[]>{
-    return this.http.get<ticket[]>(this.apiURL);
+
+  return this.http.get<ticket[]>(this.apiURL);
     }
 
-    ajouterTicket( t: ticket):Observable<ticket>{
+
+  ajouterTicket( t: ticket):Observable<ticket>{
       return this.http.post<ticket>(this.apiURL, t, httpOptions);
       }
 
