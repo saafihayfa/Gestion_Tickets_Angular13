@@ -17,7 +17,8 @@ export class LoginService {
   constructor(private http : HttpClient) {}
 
   authentifier( u: user):Observable<user>{
-    return this.http.post<user>(this.apiURL, u, {responseType : 'text' as 'json'});
+    return this.http.post<user>(this.apiURL, u);
     }
 }
 
+// , {responseType : 'text' as 'json'}

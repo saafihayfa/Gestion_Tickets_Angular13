@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
      })
   }
 
-  auth(){
+  public auth(){
     this.LoginService.authentifier(this.Newuser)
     .subscribe(c=> {
       this.router.navigate(['accueil']);
