@@ -1,20 +1,19 @@
-div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
-
+div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]
+{
   left: 20px;
   top: 80px;
   line-height: 50%;
   background: #d5d5f7;
   }
 
-  div [class="container"]{
+div [class="container"]{
 
   position: absolute;
   top: 13%;
-  left: 20%;
+  left: 18%;
   width: 1000px;
-
-
   }
+
   button
   {
       display: block;
@@ -23,14 +22,25 @@ div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
       margin-right: auto;
 
   }
+
   div [class="input-group"]{
     position: absolute;
-    top: 10%;
+    top: 4.5%;
     left: 66%;
   }
+
 table{
   position: relative;
   padding: -100px;
+  background: #ffffff;
 
-  background: #d5d5f7;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+thead,th{
+background: #d5d5f7;
+
 }

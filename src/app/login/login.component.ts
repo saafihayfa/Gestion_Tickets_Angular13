@@ -25,14 +25,13 @@ export class LoginComponent implements OnInit {
      })
   }
 
-  public auth(){
-    this.LoginService.authentifier(this.Newuser)
-    .subscribe(c=> {
-      this.router.navigate(['accueil']);
-      alert("vous etes bien connecté ");
-    console.log(c);
-    });
-
+auth(){
+  this.LoginService.authentifier(this.Newuser)
+  .subscribe(c => {
+    this.router.navigate(['accueil']);
+   alert("vous etes bien connecté " );
+  console.log(c);
+ } , err => alert("Nom Utilisateur/Mot de passe invalides"));
   }
 }
 

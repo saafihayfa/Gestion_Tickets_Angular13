@@ -40,19 +40,20 @@
         <i class="fas fa-search"></i>
       </button>
     </div>
-    <table class="table" border="2">
+    <table  border="1">
       <thead>
         <tr>
-          <th ></th>
-          <th width="-8%" >Id</th>
-          <th  width="-8%" >Titre</th>
-          <th  width="-8%" >priorité</th>
-          <th width="-8%" >Attribué à</th>
-          <th  width="-8%" >Status</th>
-          <th  width="-8%" >Description</th>
-          <th width="-8%" >Dte Creation</th>
-          <th  width="-8%" >Dte Modif</th>
-          <th  width="-8%" >Actions</th>
+          <th></th>
+          <th><p align="center" >Id</p></th>
+          <th><p align="center" >Titre</p></th>
+          <th><p align="center" >Priorité</p></th>
+          <th><p align="center" >Attribué à</p></th>
+          <th><p align="center" >Status</p></th>
+          <th><p align="center" >Description</p></th>
+          <th><p align="center" >Date Creation</p></th>
+          <th><p align="center" >Date Modif</p></th>
+          <th><p align="center" >Actions</p></th>
+
         </tr>
       </thead>
       <tbody  *ngFor="let ticket of tick  ">
@@ -70,6 +71,7 @@
           <td>{{ticket.description}}</td>
           <td>{{ticket.dtCreate}}</td>
           <td>{{ticket.dtModif}}</td>
+          <td><a class="btn btn-white" (click)="supprimTicket(ticket)"><font color="red"><b>Supprimer</b></font></a></td>
         </tr>
       </tbody>
     </table>
@@ -110,7 +112,7 @@
 <br>
 <br>
 
-</div>
+
 
 
 

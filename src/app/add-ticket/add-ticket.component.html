@@ -32,34 +32,34 @@
   <table class="table table-striped" border="2">
    <tr>
    <th> Titre</th>
-    <td><input type="text"  name="title" class="form-control" > </td>
+    <td><input type="text" [(ngModel)]= "NewTicket.title"  name="title" class="form-control" > </td>
   </tr>
     <tr>
      <th> Priorité</th>
-      <td><input type="text"name="periorite" class="form-control"> </td>
+      <td><input type="text"  [(ngModel)]= "NewTicket.periorite" name="periorite" class="form-control"> </td>
     </tr>
     <tr>
       <th> Attribué à </th>
-       <td><input type="text"name="attributedTo" class="form-control"> </td>
+       <td><input type="text" [(ngModel)]= "NewTicket.attributedTo"  name="attributedTo" class="form-control"> </td>
      </tr>
      <tr>
       <th> Status </th>
-       <td><input type="text"name="Status" class="form-control"> </td>
+       <td><input type="text" [(ngModel)]= "NewTicket.status" name="Status" class="form-control"> </td>
      </tr>
      <tr>
       <th> Description </th>
-       <td><input type="text" name="description" class="form-control"> </td>
+       <td><input type="text" [(ngModel)]= "NewTicket.description"  name="description" class="form-control"> </td>
      </tr>
      <tr>
-      <th> Dte Creation </th>
-       <td><input type="date"name="dtCreate" class="form-control"> </td>
+      <th> Date Creation </th>
+       <td><input type="date"  [(ngModel)]= "NewTicket.dtCreate" name="dtCreate" class="form-control"> </td>
      </tr>
      <tr>
-      <th> Dte Modif </th>
-       <td><input type="date"name="dtModif" class="form-control"> </td>
+      <th> Date Modif </th>
+       <td><input type="date"  [(ngModel)]= "NewTicket.dtModif" name="dtModif" class="form-control"> </td>
      </tr>
     </table>
-    <button  type="submit"  class="btn btn-outline-primary"  > Ajouter</button>
+    <button  type="submit"  (click)="addTicket()" class="btn btn-outline-primary"  > Ajouter</button>
       </form>
   </div>
   </div>

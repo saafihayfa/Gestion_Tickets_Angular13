@@ -23,4 +23,23 @@ export class AllticketsComponent implements OnInit {
 
   }
 
+  supprimTicket(t: ticket)
+  {
+      let conf = confirm("Etes-vous sûr de supprimer ce ticket ?");
+       if (conf)
+           this.AllticketsService.supprimerTicket(t.idTicket).subscribe(() => {
+               console.log(" Ticket supprimé");
+
+               this.SupprimTicketDuTableau(t);
+              });
+            }
+
+  SupprimTicketDuTableau(t : ticket) {
+     this.tick.forEach((cur, index) => {
+         if(t.idTicket===cur.idTicket) {
+             this.tick.splice(index, 1);
+         }
+     });
+    }
+
 }

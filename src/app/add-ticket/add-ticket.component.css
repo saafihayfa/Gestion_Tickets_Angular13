@@ -24,10 +24,15 @@ div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
       margin-right: auto;
       color:  rgb(90, 138, 201);
   }
-table{
+
+/*table{
   background: #d5d5f7;
   width:  500px;
   height: -50px;
+}*/
+
+input{
+    background: #d5d5f7;
 }
 
 

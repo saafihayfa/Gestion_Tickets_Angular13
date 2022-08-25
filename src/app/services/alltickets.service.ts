@@ -27,8 +27,8 @@ export class AllticketsService {
       return this.http.post<ticket>(this.apiURL, t, httpOptions);
       }
 
-  supprimerTicket(id : number){
-        const url =  `http://localhost:8087/api/hdkticket/${id}`;
+  supprimerTicket(idTicket : number){
+        const url =  `http://localhost:8087/api/hdkticket/${idTicket}`;
         return this.http.delete( url, httpOptions);
         }
 
