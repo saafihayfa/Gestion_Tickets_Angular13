@@ -19,7 +19,7 @@ export class HeadersInterceptor implements HttpInterceptor {
     const authToken = localStorage.getItem('token');
     const clonedRequest = request.clone({
          headers: new HttpHeaders({
-           "Authorization": 'Bearer'+''+ authToken,
+           "Authorization": 'Bearer '+ authToken,
            "Content-Type": "application/json"
          })
        });

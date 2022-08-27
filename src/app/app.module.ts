@@ -14,6 +14,7 @@ import { AllticketsComponent } from './alltickets/alltickets.component';
 import { HeadersInterceptor } from './services/headers.interceptor';
 import { AllticketsService } from './services/alltickets.service';
 import { LoginService } from './services/login.service';
+import { user } from './model/user.model';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { LoginService } from './services/login.service';
   providers: [
     AllticketsService,
     LoginService,
+    user,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HeadersInterceptor,

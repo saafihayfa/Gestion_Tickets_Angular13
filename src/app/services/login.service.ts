@@ -14,7 +14,7 @@ const httpOptions = {
 export class LoginService {
 
   apiURL: string = 'http://localhost:8087/api/authenticate' ;
-  static getToken: string;
+
 
   constructor(private http : HttpClient) {}
 
@@ -22,22 +22,12 @@ export class LoginService {
     return this.http.post<user>(this.apiURL, u);
 
     }
+  }
 
-   //getToken() :string{
+//getToken() :string{
    // return JSON.parse(localStorage.getItem('token') || '{}');
    // return this.u.usertoken;
    //}
-
-   //setToken(token:string):  void {
-    //return  localStorage.setItem('token', this.u.usertoken );
-//}
-
-   //getToken():  string {
-   // return  localStorage.getItem('token') || '{}';
-//}
-  }
-
-
 
 
 // , {responseType : 'text' as 'json'}

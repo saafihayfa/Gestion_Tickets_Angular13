@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
  Newuser = new user();
  public loginForm! : FormGroup ;
 
-  constructor(private LoginService: LoginService,private http :HttpClient, private router : Router, private formBuilder : FormBuilder) { }
+  constructor(private LoginService: LoginService,private http :HttpClient, private router : Router, private formBuilder : FormBuilder, private _user:user) { }
 
   ngOnInit(): void {
     this.loginForm= this.formBuilder.group({
@@ -31,7 +31,7 @@ auth(){
   .subscribe(c => {
     this.router.navigate(['accueil']);
    alert("vous etes bien connecté " );
-   localStorage.setItem('token', c.usertoken);
+   localStorage.setItem('token', c.token)
    console.log(c);
  } , err => alert("Nom Utilisateur/Mot de passe invalides"));
 
