@@ -6,6 +6,7 @@ import { user } from '../model/user.model';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -30,9 +31,12 @@ auth(){
   .subscribe(c => {
     this.router.navigate(['accueil']);
    alert("vous etes bien connecté " );
-  console.log(c);
+   localStorage.setItem('token', JSON.stringify(c.usertoken));
+   console.log(c);
  } , err => alert("Nom Utilisateur/Mot de passe invalides"));
+
   }
+
 }
 
 

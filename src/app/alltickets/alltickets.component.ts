@@ -29,7 +29,7 @@ export class AllticketsComponent implements OnInit {
        if (conf)
            this.AllticketsService.supprimerTicket(t.idTicket).subscribe(() => {
                console.log(" Ticket supprimé");
-
+               alert("Ticket supprimé");
                this.SupprimTicketDuTableau(t);
               });
             }

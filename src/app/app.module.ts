@@ -8,10 +8,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AccueilComponent } from './accueil/accueil.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { AllticketsComponent } from './alltickets/alltickets.component';
-import { HeadersInterceptor } from './headers.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,18 +32,7 @@ import { HeadersInterceptor } from './headers.interceptor';
 
 
   ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HeadersInterceptor,
-      multi: true
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HeadersInterceptor,
-      multi: true
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

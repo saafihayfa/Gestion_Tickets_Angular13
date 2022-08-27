@@ -5,6 +5,6 @@ export class ticket {
   attributedTo! : number;
   status! : string;
   description! : string ;
-  dtCreate! : Date;
-  dtModif! : Date;
+  dtCreate! : string;
+  dtModif! : string;
 }

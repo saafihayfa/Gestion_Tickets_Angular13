@@ -1,6 +1,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <div class="site-blocks-cover" style="background-image: url('assets/hayfa1.jpg');" >
   <app-navbar></app-navbar>
@@ -52,10 +53,12 @@
           <th><p align="center" >Description</p></th>
           <th><p align="center" >Date Creation</p></th>
           <th><p align="center" >Date Modif</p></th>
-          <th><p align="center" >Actions</p></th>
-
+          <th><p align="center" ></p></th>
+          <th><p align="center" ></p></th>
+          <th><p align="center" ></p></th>
         </tr>
       </thead>
+
       <tbody  *ngFor="let ticket of tick  ">
         <tr>
           <th scope="row">
@@ -71,7 +74,9 @@
           <td>{{ticket.description}}</td>
           <td>{{ticket.dtCreate}}</td>
           <td>{{ticket.dtModif}}</td>
-          <td><a class="btn btn-white" (click)="supprimTicket(ticket)"><font color="red"><b>Supprimer</b></font></a></td>
+          <td class='material-icons'  (click)="supprimTicket(ticket)"><button type="button" class="btn btn-outline-light"><font color="red">delete</font></button></td>
+          <td></td>
+          <td class='material-icons' ><button type="button" class="btn btn-outline-light"><font color=" blue">edit</font></button></td>
         </tr>
       </tbody>
     </table>
