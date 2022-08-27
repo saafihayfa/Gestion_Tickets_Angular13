@@ -44,7 +44,16 @@
      </tr>
      <tr>
       <th> Status </th>
-       <td><input type="text" [(ngModel)]= "NewTicket.status" name="Status" class="form-control"> </td>
+     <!-- <td> <input type="text" [(ngModel)]= "NewTicket.status" name="Status" class="form-control"> </td> -->
+     <p><select  [(ngModel)]= "NewTicket.status" name ="status" lass="form-control" >
+      <option> ----------------------------------------- </option>
+       <option> pending par default </option>
+       <option> in progress</option>
+       <option>  in test</option>
+       <option> resolved </option>
+
+   </select>  </p>
+
      </tr>
      <tr>
       <th> Description </th>

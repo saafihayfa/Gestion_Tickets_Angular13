@@ -24,11 +24,12 @@ export class AllticketsService {
 
 
   ajouterTicket( t: ticket):Observable<ticket>{
-      return this.http.post<ticket>(this.apiURL, t, httpOptions);
+      const url = 'http://localhost:8087/api/addhdkticket'
+      return this.http.post<ticket>(url, t, httpOptions);
       }
 
   supprimerTicket(idTicket : number){
-        const url =  `http://localhost:8087/api/hdkticket/${idTicket}`;
+        const url =  `http://localhost:8087/api/deletehdkticket/${idTicket}`;
         return this.http.delete( url, httpOptions);
         }
 

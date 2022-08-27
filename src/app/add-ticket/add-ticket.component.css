@@ -31,6 +31,14 @@ div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
   height: -50px;
 }*/
 
+
+select {
+  position: absolute;
+  left: 39%;
+  top: 47%;
+  height: 33px;;
+  background: #d5d5f7;
+}
 input{
     background: #d5d5f7;
 }
