@@ -12,14 +12,14 @@ import { LoginService } from './login.service';
 @Injectable()
 export class HeadersInterceptor implements HttpInterceptor {
 
-  constructor(private auth: LoginService) {}
+  constructor() {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
     const authToken = localStorage.getItem('token');
     const clonedRequest = request.clone({
          headers: new HttpHeaders({
-           "Authorization": 'Bearer' +''+ authToken,
+           "Authorization": 'Bearer'+''+ authToken,
            "Content-Type": "application/json"
          })
        });

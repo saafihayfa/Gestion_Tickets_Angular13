@@ -31,7 +31,7 @@ auth(){
   .subscribe(c => {
     this.router.navigate(['accueil']);
    alert("vous etes bien connecté " );
-   localStorage.setItem('token', JSON.stringify(c.usertoken));
+   localStorage.setItem('token', c.usertoken);
    console.log(c);
  } , err => alert("Nom Utilisateur/Mot de passe invalides"));
 

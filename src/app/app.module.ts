@@ -8,9 +8,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AccueilComponent } from './accueil/accueil.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { AllticketsComponent } from './alltickets/alltickets.component';
+import { HeadersInterceptor } from './services/headers.interceptor';
+import { AllticketsService } from './services/alltickets.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -20,19 +23,25 @@ import { AllticketsComponent } from './alltickets/alltickets.component';
     AccueilComponent,
     AddTicketComponent,
     AllticketsComponent,
-
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
 
   ],
-  providers: [],
+  providers: [
+    AllticketsService,
+    LoginService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HeadersInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
