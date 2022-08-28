@@ -33,6 +33,7 @@ export class AllticketsService {
         return this.http.delete( url, httpOptions);
         }
 
+
 }
 
 
