@@ -20,7 +20,6 @@ export class AllticketsComponent implements OnInit {
       this.tick=data
       console.log(data);
       } );
-
   }
 
   supprimTicket(t: ticket)

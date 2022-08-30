@@ -33,6 +33,11 @@ export class AllticketsService {
         return this.http.delete( url, httpOptions);
         }
 
+  modifierTicket(idTicket : number) : Observable<ticket>{
+      const url = `http://localhost:8087/api/deletehdkticket/${idTicket}` ;
+        return this.http.put<ticket>(url, httpOptions);
+        }
+
 
 }
 

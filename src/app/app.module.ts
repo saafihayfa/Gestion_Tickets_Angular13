@@ -15,6 +15,7 @@ import { HeadersInterceptor } from './services/headers.interceptor';
 import { AllticketsService } from './services/alltickets.service';
 import { LoginService } from './services/login.service';
 import { user } from './model/user.model';
+import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
 
 @NgModule({
   declarations: [
@@ -24,15 +25,14 @@ import { user } from './model/user.model';
     AccueilComponent,
     AddTicketComponent,
     AllticketsComponent,
+    UpdateTicketComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
-
-
+    ReactiveFormsModule
   ],
   providers: [
     AllticketsService,
