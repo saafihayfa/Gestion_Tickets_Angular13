@@ -1,1 +1,51 @@
-<p>update-ticket works!</p>
+
+
+
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+  <form >
+  <table class="table table-striped" border="2">
+   <tr>
+   <th> Titre</th>
+    <td><input type="text"  name="title" class="form-control" > </td>
+  </tr>
+    <tr>
+     <th> Priorité</th>
+      <td><input type="text"  name="periorite" class="form-control"> </td>
+    </tr>
+    <tr>
+      <th> Attribué à </th>
+       <td><input type="text"   name="attributedTo" class="form-control"> </td>
+     </tr>
+     <tr>
+      <th> Status </th>
+     <!-- <td> <input type="text" [(ngModel)]= "NewTicket.status" name="Status" class="form-control"> </td> -->
+     <p><select   name ="status" lass="form-control" >
+      <option> ------------------------------- </option>
+       <option> pending par default </option>
+       <option> in progress</option>
+       <option>  in test</option>
+       <option> resolved </option>
+
+   </select>  </p>
+
+     </tr>
+     <tr>
+      <th> Description </th>
+       <td><input type="text"  name="description" class="form-control"> </td>
+     </tr>
+     <tr>
+      <th> Date Creation </th>
+       <td><input type="date"   name="dtCreate" class="form-control"> </td>
+     </tr>
+     <tr>
+      <th> Date Modif </th>
+       <td><input type="date"   name="dtModif" class="form-control"> </td>
+     </tr>
+    </table>
+    <button  type="submit" class="btn btn-outline-primary"  > Ajouter</button>
+      </form>
+</div>
+  </div>
+</div>
