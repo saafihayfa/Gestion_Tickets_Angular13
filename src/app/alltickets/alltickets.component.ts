@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ticket } from '../model/ticket.model';
 import { AllticketsService } from '../services/alltickets.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink, ROUTER_CONFIGURATION } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-alltickets',

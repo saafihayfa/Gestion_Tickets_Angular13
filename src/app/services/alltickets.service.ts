@@ -22,7 +22,6 @@ export class AllticketsService {
   return this.http.get<ticket[]>(this.apiURL);
     }
 
-
   ajouterTicket( t: ticket):Observable<ticket>{
       const url = 'http://localhost:8087/api/addhdkticket'
       return this.http.post<ticket>(url, t, httpOptions);
@@ -33,11 +32,16 @@ export class AllticketsService {
         return this.http.delete( url, httpOptions);
         }
 
-  modifierTicket(idTicket : number) : Observable<ticket>{
-      const url = `http://localhost:8087/api/deletehdkticket/${idTicket}` ;
-        return this.http.put<ticket>(url, httpOptions);
+  consulterTicket (idTicket: number):Observable<ticket>{
+      const url =  `http://localhost:8087/api/hdkticket/${idTicket}`;
+          return this.http.get<ticket>(url);
         }
 
+
+  modifierTicket(t : ticket) : Observable<ticket>{
+      const url = `http://localhost:8087/api/updatehdkticket/${t.idTicket}` ;
+        return this.http.put<ticket>(url,t, httpOptions);
+        }
 
 }
 

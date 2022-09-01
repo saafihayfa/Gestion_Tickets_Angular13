@@ -1,6 +1,4 @@
 
-
-
 <div class="container">
   <div class="card shadow mb-4">
   <div class="card-body">
@@ -8,44 +6,41 @@
   <table class="table table-striped" border="2">
    <tr>
    <th> Titre</th>
-    <td><input type="text"  name="title" class="form-control" > </td>
+    <td><input type="text" [(ngModel)]= "spectick.title"  name="title" class="form-control" > </td>
   </tr>
     <tr>
      <th> Priorité</th>
-      <td><input type="text"  name="periorite" class="form-control"> </td>
+      <td><input type="text" [(ngModel)]= "spectick.periorite"  name="periorite" class="form-control"> </td>
     </tr>
     <tr>
       <th> Attribué à </th>
-       <td><input type="text"   name="attributedTo" class="form-control"> </td>
+       <td><input type="text" [(ngModel)]= "spectick.attributedTo"   name="attributedTo" class="form-control"> </td>
      </tr>
      <tr>
       <th> Status </th>
-     <!-- <td> <input type="text" [(ngModel)]= "NewTicket.status" name="Status" class="form-control"> </td> -->
-     <p><select   name ="status" lass="form-control" >
-      <option> ------------------------------- </option>
-       <option> pending par default </option>
-       <option> in progress</option>
-       <option>  in test</option>
-       <option> resolved </option>
-
-   </select>  </p>
+      <td> <input type="text" [(ngModel)]= "spectick.status" name="Status" class="form-control"> </td>
 
      </tr>
      <tr>
       <th> Description </th>
-       <td><input type="text"  name="description" class="form-control"> </td>
+       <td><input type="text"  [(ngModel)]= "spectick.description"  name="description" class="form-control"> </td>
      </tr>
      <tr>
       <th> Date Creation </th>
-       <td><input type="date"   name="dtCreate" class="form-control"> </td>
+       <td><input type="date" [ngModel]= "spectick.dtCreate | date: 'yyyy-MM-dd'"
+        (ngModelChange)=" spectick.dtCreate= $event"
+        name="dtCreate" class="form-control"> </td>
      </tr>
      <tr>
       <th> Date Modif </th>
-       <td><input type="date"   name="dtModif" class="form-control"> </td>
+      <td><input type="date" [ngModel]= "spectick.dtModif | date: 'yyyy-MM-dd'"
+        (ngModelChange)=" spectick.dtModif= $event"
+        name="dtCreate" class="form-control"> </td>
      </tr>
     </table>
-    <button  type="submit" class="btn btn-outline-primary"  > Ajouter</button>
+    <button  type="submit" class="btn btn-outline-primary"  (click)="modifticket()" > Modifier</button>
       </form>
 </div>
   </div>
 </div>
+

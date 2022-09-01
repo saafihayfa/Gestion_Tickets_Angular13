@@ -15,6 +15,7 @@ import { AllticketsService } from './services/alltickets.service';
 import { LoginService } from './services/login.service';
 import { user } from './model/user.model';
 import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+import { ActivatedRoute } from '@angular/router';
 
 @NgModule({
   declarations: [

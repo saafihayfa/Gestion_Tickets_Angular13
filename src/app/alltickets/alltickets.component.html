@@ -5,14 +5,14 @@
 
 <div class="site-blocks-cover" style="background-image: url('assets/hayfa1.jpg');" >
   <app-navbar></app-navbar>
-  <label>____________________________________________________________________________________________________________________________________</label>
-<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
+  <label>_______________________________________________________________________________________________________________________________________________</label>
+
+  <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
 <br>
 <br>
 <button  class="btn btn-outline-primary" routerLink="/add-ticket" > + New Ticket</button>
 <br>
 <br>
-
   <label>______________________________</label>
   <a href="#" class="w3-bar-item w3-button">Unsigned Tickets</a>
   <br>
@@ -23,9 +23,6 @@
   <br>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
-
-
-
 <br>
 <br>
 <div class="container">
@@ -71,11 +68,11 @@
           <td>{{ticket.attributedTo}}</td>
           <td>{{ticket.status}}</td>
           <td>{{ticket.description}}</td>
-          <td>{{ticket.dtCreate}}</td>
-          <td>{{ticket.dtModif}}</td>
-          <td class='material-icons'  (click)="supprimTicket(ticket)"><button type="button" class="btn btn-outline-light"><font color="red">delete</font></button></td>
+          <td>{{ticket.dtCreate | date: 'dd-MM-yyyy'}} </td>
+          <td>{{ticket.dtModif | date: 'dd-MM-yyyy'}}</td>
+          <td class='material-icons' [routerLink]= "['/update-ticket',ticket.idTicket]" ><button type="button" class="btn btn-outline-light"><font color=" blue" >edit</font></button></td>
           <td></td>
-          <td class='material-icons' ><button type="button" class="btn btn-outline-light"><font color=" blue" >edit</font></button></td>
+          <td class='material-icons'  (click)="supprimTicket(ticket)"><button type="button" class="btn btn-outline-light"><font color="red">delete</font></button></td>
         </tr>
       </tbody>
     </table>

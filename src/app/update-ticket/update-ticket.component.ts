@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ticket } from '../model/ticket.model';
+import { AllticketsService } from '../services/alltickets.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-update-ticket',
@@ -7,9 +12,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateTicketComponent implements OnInit {
 
-  constructor() { }
+ spectick = new ticket  () ;
+
+
+  constructor(private AllticketsService: AllticketsService,
+              private router : Router,
+              private ActivatedRoute: ActivatedRoute)
+        { }
 
   ngOnInit(): void {
+
+    this.AllticketsService.consulterTicket(this.ActivatedRoute.snapshot.params['id']).
+    subscribe( tick =>{ this.spectick = tick; } ) ;
+
   }
+
+  modifticket() {
+    this.AllticketsService.modifierTicket(this.spectick)
+    .subscribe( t=> {
+    this.router.navigate(['alltickets']);
+    alert ("ticket modifié ");
+    console.log(t);
+    },
+    err => { alert("Problème lors de la modification !");}
+    );
+    }
+
 
 }

@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: "accueil", component : AccueilComponent},
   {path: "add-ticket", component : AddTicketComponent},
   {path : "alltickets" , component: AllticketsComponent},
-  {path : "update-ticket", component: UpdateTicketComponent},
+  {path : "update-ticket/:id", component: UpdateTicketComponent},
   {path: "", redirectTo: "login", pathMatch: "full" }
 
 ];

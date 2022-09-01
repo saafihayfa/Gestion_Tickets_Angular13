@@ -3,9 +3,11 @@ import { Observable } from 'rxjs';
 import { user } from '../model/user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 const httpOptions = {
-  headers: new HttpHeaders( {'Content-Type': 'application/json'}
-   )
+  headers: new HttpHeaders( {'Content-Type': 'application/json',
+  //"Authorization": 'No Auth'
+})
   };
 
 @Injectable({
@@ -24,10 +26,4 @@ export class LoginService {
     }
   }
 
-//getToken() :string{
-   // return JSON.parse(localStorage.getItem('token') || '{}');
-   // return this.u.usertoken;
-   //}
 
-
-// , {responseType : 'text' as 'json'}
