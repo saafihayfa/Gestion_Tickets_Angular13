@@ -26,10 +26,8 @@ export class AddTicketComponent implements OnInit {
     .subscribe(t=> {
     console.log(t);
     alert ("ticket ajouté ")
+    this.router.navigate(['alltickets']);
     })
-    //this.router.navigate(['alltickets']).then(() => {
-     // window.location.reload();
-     // });
     }
 
 }

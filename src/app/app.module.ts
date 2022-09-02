@@ -16,6 +16,7 @@ import { LoginService } from './services/login.service';
 import { user } from './model/user.model';
 import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
 import { ActivatedRoute } from '@angular/router';
+import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ActivatedRoute } from '@angular/router';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     AllticketsService,

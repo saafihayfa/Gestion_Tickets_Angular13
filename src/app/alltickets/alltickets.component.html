@@ -10,18 +10,17 @@
   <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
 <br>
 <br>
-<button  class="btn btn-outline-primary" routerLink="/add-ticket" > + New Ticket</button>
+<button  class="btn btn-outline-primary" routerLink="/add-ticket" > + Nouveau Ticket</button>
 <br>
 <br>
   <label>______________________________</label>
-  <a href="#" class="w3-bar-item w3-button">Unsigned Tickets</a>
+  <a href="#" class="w3-bar-item w3-button">Tickets non signés</a>
   <br>
   <br>
-  <a href="#" class="w3-bar-item w3-button">My Open Tickets</a>
+  <a href="#" class="w3-bar-item w3-button"> Tickets ouverts</a>
   <label>______________________________</label>
   <label>______________________________</label>
-  <br>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+
 </div>
 <br>
 <br>
@@ -32,10 +31,9 @@
 
      <div class="input-group">
       <div id="search-autocomplete" class="form-outline">
-        <input type="search" id="form1" class="form-control"  placeholder="chercher un ticket" >
+        <input type="search" [(ngModel)]= "searchtext" id="form1" class="form-control"  placeholder="chercher un ticket" >
       </div>
-    <!--  <button type="button" class="btn btn-primary"> chercher</button>  -->
-    <td class='material-icons'><button type="button" class="btn btn-outline-light"><font color="blue"><b>search</b></font></button></td>
+     <td class='material-icons'><button type="button" class="btn btn-outline-light"><font color="blue"><b>search</b></font></button></td>
     </div>
     <table  border="1">
       <thead>
@@ -55,7 +53,7 @@
         </tr>
       </thead>
 
-      <tbody  *ngFor="let ticket of tick  ">
+      <tbody  *ngFor="let ticket of tick|filter:searchtext">
         <tr>
           <th scope="row">
             <div class="form-check">
