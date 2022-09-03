@@ -6,8 +6,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { AllticketsComponent } from './alltickets/alltickets.component';
 import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+import { Navbar1Component } from './navbar1/navbar1.component';
+
 const routes: Routes = [
   { path: "navbar", component: NavbarComponent },
+  {path : "navbar", component: Navbar1Component},
   { path: "login", component: LoginComponent},
   {path: "accueil", component : AccueilComponent},
   {path: "add-ticket", component : AddTicketComponent},

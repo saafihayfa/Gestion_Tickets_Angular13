@@ -16,8 +16,6 @@ div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
       margin-right: auto;
 
   }
-
-
   p {
     position: relative;
     left: 25%;
@@ -39,3 +37,4 @@ div[class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"]{
       background-position: 150%;
     }
   }
+

@@ -17,6 +17,7 @@ import { user } from './model/user.model';
 import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
 import { ActivatedRoute } from '@angular/router';
 import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Navbar1Component } from './navbar1/navbar1.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
     AddTicketComponent,
     AllticketsComponent,
     UpdateTicketComponent,
+    Navbar1Component,
   ],
   imports: [
     BrowserModule,
