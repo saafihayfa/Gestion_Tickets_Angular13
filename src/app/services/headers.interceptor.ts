@@ -6,7 +6,7 @@ import {
   HttpResponse,
   HttpHeaders
 } from '@angular/common/http';
-import {map, Observable } from 'rxjs';
+import {Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { LoginService } from './login.service';
 @Injectable()
