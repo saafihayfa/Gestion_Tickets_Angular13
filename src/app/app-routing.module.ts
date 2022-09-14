@@ -7,6 +7,7 @@ import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { AllticketsComponent } from './alltickets/alltickets.component';
 import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
 import { Navbar1Component } from './navbar1/navbar1.component';
+import { GetTicketComponent } from './get-ticket/get-ticket.component';
 
 const routes: Routes = [
   { path: "navbar", component: NavbarComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "add-ticket", component : AddTicketComponent},
   {path : "alltickets" , component: AllticketsComponent},
   {path : "update-ticket/:id", component: UpdateTicketComponent},
+  {path: "get-ticket", component : GetTicketComponent},
   {path: "", redirectTo: "login", pathMatch: "full" }
 
 ];

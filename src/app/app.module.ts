@@ -18,6 +18,7 @@ import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
 import { ActivatedRoute } from '@angular/router';
 import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Navbar1Component } from './navbar1/navbar1.component';
+import { GetTicketComponent } from './get-ticket/get-ticket.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { Navbar1Component } from './navbar1/navbar1.component';
     AllticketsComponent,
     UpdateTicketComponent,
     Navbar1Component,
+    GetTicketComponent,
   ],
   imports: [
     BrowserModule,
