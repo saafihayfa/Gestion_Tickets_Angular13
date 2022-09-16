@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 auth(){
   this.LoginService.authentifier(this.Newuser)
   .subscribe(c => {
-    this.router.navigate(['accueil']);
+    this.router.navigate(['alltickets']);
    alert("vous etes bien connecté " );
    localStorage.setItem('token', c.token)
    console.log(c);
