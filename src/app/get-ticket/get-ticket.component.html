@@ -1,0 +1,147 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="site-blocks-cover" style="background-image: url('assets/hayfa1.jpg');" >
+  <app-navbar1></app-navbar1>
+  <label>_______________________________________________________________________________________________________________________________________________</label>
+
+  <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
+<br>
+<br>
+<button  class="btn btn-outline-primary" routerLink="/add-ticket" > + Nouveau Ticket</button>
+<br>
+<br>
+<a  class="w3-bar-item w3-button" routerLink="/alltickets">Tous les Tickets</a>
+  <label>______________________________</label>
+  <label>______________________________</label>
+  <br>
+  <br>
+  <a href="#" class="w3-bar-item w3-button" routerLink="/get-ticket">Tickets reçus</a>
+  <br>
+  <a href="#" class="w3-bar-item w3-button" routerLink="/sent-ticket">Tickets envoyés</a>
+  <br>
+  <a href="#" class="w3-bar-item w3-button" routerLink="/other-ticket">Autres </a>
+  <br>
+  <label>______________________________</label>
+  <label>______________________________</label>
+  <br>
+  <br>
+  <a href="#" class="w3-bar-item w3-button">En Attente </a>
+  <a href="#" class="w3-bar-item w3-button">In progress </a>
+  <a href="#" class="w3-bar-item w3-button">In Test </a>
+
+
+  <br>
+
+
+  <label>______________________________</label>
+  <label>______________________________</label>
+
+  <br>
+  <br>
+  <br>
+
+  <a href="#" class="w3-bar-item w3-button" routerLink="/notaffec-ticket">Tickets non affectés</a>
+  <br>
+  <br>
+  <a href="#" class="w3-bar-item w3-button" routerLink="/resolved-ticket"> Tickets Supprimés</a>
+
+
+
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+     <h3><font color="blue" > Tickets reçus</font> </h3>
+
+     <div class="input-group">
+      <div id="search-autocomplete" class="form-outline">
+        <input type="search" [(ngModel)]= "searchtext" id="form1" class="form-control"  placeholder="Rechercher" >
+      </div>
+     <td class='material-icons'><button type="button" class="btn btn-outline-light"><font color="blue"><b>search</b></font></button></td>
+    </div>
+    <table  border="1">
+      <thead>
+        <tr>
+          <th></th>
+          <th><p align="center" >Id</p></th>
+          <th><p align="center" >Titre</p></th>
+          <th><p align="center" >Priorité</p></th>
+          <th><p align="center" >Attribué à</p></th>
+          <th><p align="center" >Status</p></th>
+          <th><p align="center" >Description</p></th>
+          <th><p align="center" >Date Creation</p></th>
+          <th><p align="center" >Date Modif</p></th>
+          <th><p align="center" ></p></th>
+          <th><p align="center" ></p></th>
+          <th><p align="center" ></p></th>
+        </tr>
+      </thead>
+
+      <tbody  *ngFor="let ticket of tick|filter:searchtext">
+        <tr>
+          <th scope="row">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            </div>
+          </th>
+          <td>{{ticket.idTicket}}</td>
+          <td>{{ticket.title}}</td>
+          <td>{{ticket.periorite}}</td>
+          <td>{{ticket.attributedTo}}</td>
+          <td>{{ticket.status}}</td>
+          <td>{{ticket.description}}</td>
+          <td>{{ticket.dtCreate | date: 'dd-MM-yyyy'}} </td>
+          <td>{{ticket.dtModif | date: 'dd-MM-yyyy'}}</td>
+          <td class='material-icons' [routerLink]= "['/update-ticket',ticket.idTicket]" ><button type="button" class="btn btn-outline-light"><font color=" blue" >edit</font></button></td>
+          <td></td>
+          <td class='material-icons'  (click)="supprimTicket(ticket)"><button type="button" class="btn btn-outline-light"><font color="red">delete</font></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+

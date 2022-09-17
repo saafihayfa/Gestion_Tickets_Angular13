@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { ticket } from '../model/ticket.model';
-import { AllticketsService } from '../services/alltickets.service';
+import { SidebarService } from '../services/sidebar.service';
 import { Router, RouterLink} from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-alltickets',
-  templateUrl: './alltickets.component.html',
-  styleUrls: ['./alltickets.component.css']
+  selector: 'app-other-ticket',
+  templateUrl: './other-ticket.component.html',
+  styleUrls: ['./other-ticket.component.css']
 })
-export class AllticketsComponent implements OnInit {
+export class OtherTicketComponent implements OnInit {
+  tick !:ticket[]  ;
+  searchtext!: any;
 
- tick !:ticket[]  ;
- searchtext!: any;
-  constructor(private AllticketsService: AllticketsService, private router : Router) { }
+  constructor(private SidebarService: SidebarService, private router : Router) { }
 
   ngOnInit(): void {
 
-    this.AllticketsService.listerTicket().subscribe( data => {
+    this.SidebarService.Autrestickets().subscribe( data => {
       this.tick=data
       console.log(data);
       } );
@@ -27,7 +27,7 @@ export class AllticketsComponent implements OnInit {
   {
       let conf = confirm("Etes-vous sûr de supprimer ce ticket ?");
        if (conf)
-           this.AllticketsService.supprimerTicket(t.idTicket).subscribe(() => {
+           this.SidebarService.supprimerTicket(t.idTicket).subscribe(() => {
                console.log(" Ticket supprimé");
                alert("Ticket supprimé");
                this.SupprimTicketDuTableau(t);
@@ -41,4 +41,5 @@ export class AllticketsComponent implements OnInit {
          }
      });
     }
+
 }

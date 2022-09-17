@@ -19,6 +19,10 @@ import { ActivatedRoute } from '@angular/router';
 import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { GetTicketComponent } from './get-ticket/get-ticket.component';
+import { SentTicketComponent } from './sent-ticket/sent-ticket.component';
+import { OtherTicketComponent } from './other-ticket/other-ticket.component';
+import { NotaffecTicketComponent } from './notaffec-ticket/notaffec-ticket.component';
+import { ResolvedTicketComponent } from './resolved-ticket/resolved-ticket.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,10 @@ import { GetTicketComponent } from './get-ticket/get-ticket.component';
     UpdateTicketComponent,
     Navbar1Component,
     GetTicketComponent,
+    SentTicketComponent,
+    OtherTicketComponent,
+    NotaffecTicketComponent,
+    ResolvedTicketComponent,
   ],
   imports: [
     BrowserModule,

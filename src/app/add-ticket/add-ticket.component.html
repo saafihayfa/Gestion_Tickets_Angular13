@@ -8,18 +8,47 @@
 <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
   <br>
   <br>
-  <a href="#" class="w3-bar-item w3-button" routerLink="/alltickets">Tous les Tickets</a>
-
+  <button  class="btn btn-outline-primary" routerLink="/add-ticket" > + Nouveau Ticket</button>
   <br>
+  <br>
+  <a  class="w3-bar-item w3-button" routerLink="/alltickets">Tous les Tickets</a>
     <label>______________________________</label>
     <label>______________________________</label>
-    <a href="#" class="w3-bar-item w3-button">Tickets non signés</a>
     <br>
     <br>
-    <a href="#" class="w3-bar-item w3-button"> Tickets ouverts</a>
+    <a href="#" class="w3-bar-item w3-button" routerLink="/get-ticket">Tickets reçus</a>
+    <br>
+    <a href="#" class="w3-bar-item w3-button" routerLink="/sent-ticket">Tickets envoyés</a>
+    <br>
+    <a href="#" class="w3-bar-item w3-button" routerLink="/other-ticket">Autres </a>
+    <br>
     <label>______________________________</label>
     <label>______________________________</label>
-</div>
+    <br>
+    <br>
+    <a href="#" class="w3-bar-item w3-button">En Attente </a>
+    <a href="#" class="w3-bar-item w3-button">In progress </a>
+    <a href="#" class="w3-bar-item w3-button">In Test </a>
+
+
+    <br>
+
+
+    <label>______________________________</label>
+    <label>______________________________</label>
+
+    <br>
+    <br>
+    <br>
+
+    <a href="#" class="w3-bar-item w3-button">Tickets non affectés</a>
+    <br>
+    <br>
+    <a href="#" class="w3-bar-item w3-button"> Tickets Supprimés</a>
+
+
+
+  </div>
 
 <br>
 <br>
@@ -46,7 +75,7 @@
      <!-- <td> <input type="text" [(ngModel)]= "NewTicket.status" name="Status" class="form-control"> </td> -->
      <p><select  [(ngModel)]= "NewTicket.status" name ="status" lass="form-control" >
       <option> ----------------------------------------- </option>
-       <option> pending par default </option>
+       <option> pending </option>
        <option> in progress</option>
        <option>  in test</option>
        <option> resolved </option>
