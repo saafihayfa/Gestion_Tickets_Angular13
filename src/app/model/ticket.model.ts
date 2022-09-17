@@ -1,3 +1,5 @@
+import { user } from "./user.model";
+
 export class ticket {
   idTicket! : number;
   title! : string;
