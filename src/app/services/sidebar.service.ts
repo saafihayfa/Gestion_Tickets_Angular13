@@ -15,7 +15,12 @@ export class SidebarService {
   constructor(private http : HttpClient) { }
 
   Ticketsrecus(): Observable<ticket[]>{
-    const url ='http://localhost:8087/api/receivedticket'
+   const url ='http://localhost:8087/api/receivedticket'
+    return this.http.get<ticket[]>(url);
+   }
+
+   listerTicket(): Observable<ticket[]>{
+    const url ='http://localhost:8087/api/hdkticket'
     return this.http.get<ticket[]>(url);
    }
 

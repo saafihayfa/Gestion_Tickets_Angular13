@@ -17,7 +17,8 @@ export class SentTicketComponent implements OnInit {
   constructor(private SidebarService: SidebarService, private router : Router) { }
 
   ngOnInit(): void {
-
+    const id = localStorage.getItem("idUser")
+    console.log(id);
     this.SidebarService.Ticketsenvoyes().subscribe( data => {
       this.tick=data
       console.log(data);

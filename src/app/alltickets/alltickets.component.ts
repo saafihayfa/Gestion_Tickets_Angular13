@@ -13,6 +13,7 @@ export class AllticketsComponent implements OnInit {
 
  tick !:ticket[]  ;
  searchtext!: any;
+
   constructor(private AllticketsService: AllticketsService, private router : Router) { }
 
   ngOnInit(): void {

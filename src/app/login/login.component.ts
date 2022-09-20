@@ -5,6 +5,7 @@ import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { user } from '../model/user.model';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ticket } from '../model/ticket.model';
 
 
 @Component({
@@ -32,6 +33,8 @@ auth(){
     this.router.navigate(['alltickets']);
    alert("vous etes bien connecté " );
    localStorage.setItem('token', c.token)
+   localStorage.setItem('name', c.userName)
+   localStorage.setItem('idUser', (c.idUser).toString())
    console.log(c);
  } , err => alert("Nom Utilisateur/Mot de passe invalides"));
 
