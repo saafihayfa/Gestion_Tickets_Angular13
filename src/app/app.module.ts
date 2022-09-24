@@ -23,6 +23,9 @@ import { SentTicketComponent } from './sent-ticket/sent-ticket.component';
 import { OtherTicketComponent } from './other-ticket/other-ticket.component';
 import { NotaffecTicketComponent } from './notaffec-ticket/notaffec-ticket.component';
 import { ResolvedTicketComponent } from './resolved-ticket/resolved-ticket.component';
+import { PendingTicketComponent } from './pending-ticket/pending-ticket.component';
+import { ProgressTicketComponent } from './progress-ticket/progress-ticket.component';
+import { TestTicketComponent } from './test-ticket/test-ticket.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { ResolvedTicketComponent } from './resolved-ticket/resolved-ticket.compo
     OtherTicketComponent,
     NotaffecTicketComponent,
     ResolvedTicketComponent,
+    PendingTicketComponent,
+    ProgressTicketComponent,
+    TestTicketComponent,
   ],
   imports: [
     BrowserModule,

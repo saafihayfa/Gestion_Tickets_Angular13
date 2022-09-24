@@ -45,6 +45,24 @@ export class SidebarService {
 
    }
 
+   Ticketsenattente(){
+    const url ='http://localhost:8087/api/pending_ticket'
+    return this.http.get<ticket[]>(url);
+
+   }
+
+   Ticketsencours(){
+    const url ='http://localhost:8087/api/progress_ticket'
+    return this.http.get<ticket[]>(url);
+
+   }
+
+   Ticketsentest(){
+    const url ='http://localhost:8087/api/test_ticket'
+    return this.http.get<ticket[]>(url);
+
+   }
+
    supprimerTicket(idTicket : number){
     const url =  `http://localhost:8087/api/deletehdkticket/${idTicket}`;
     return this.http.delete( url, httpOptions);

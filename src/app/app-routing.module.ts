@@ -12,6 +12,10 @@ import { SentTicketComponent } from './sent-ticket/sent-ticket.component';
 import { OtherTicketComponent } from './other-ticket/other-ticket.component';
 import { NotaffecTicketComponent } from './notaffec-ticket/notaffec-ticket.component';
 import { ResolvedTicketComponent } from './resolved-ticket/resolved-ticket.component';
+import { PendingTicketComponent } from './pending-ticket/pending-ticket.component';
+import { ProgressTicketComponent } from './progress-ticket/progress-ticket.component';
+import { TestTicketComponent } from './test-ticket/test-ticket.component';
+
 
 const routes: Routes = [
   { path: "navbar", component: NavbarComponent },
@@ -26,6 +30,9 @@ const routes: Routes = [
   {path: "other-ticket", component : OtherTicketComponent},
   {path: "notaffec-ticket", component : NotaffecTicketComponent},
   {path: "resolved-ticket", component : ResolvedTicketComponent},
+  {path: "pending-ticket" , component : PendingTicketComponent},
+  {path: "progress-ticket", component : ProgressTicketComponent},
+  {path: "test-ticket", component : TestTicketComponent},
   {path: "", redirectTo: "login", pathMatch: "full" }
 
 ];
