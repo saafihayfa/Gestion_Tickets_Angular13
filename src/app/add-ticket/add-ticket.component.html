@@ -8,9 +8,6 @@
 <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" >
   <br>
   <br>
-  <button  class="btn btn-outline-primary" routerLink="/add-ticket" > + Nouveau Ticket</button>
-  <br>
-  <br>
   <a  class="w3-bar-item w3-button" routerLink="/alltickets">Tous les Tickets</a>
     <label>______________________________</label>
     <label>______________________________</label>
@@ -19,8 +16,6 @@
     <a href="#" class="w3-bar-item w3-button" routerLink="/get-ticket">Tickets reçus</a>
     <br>
     <a href="#" class="w3-bar-item w3-button" routerLink="/sent-ticket">Tickets envoyés</a>
-    <br>
-    <a href="#" class="w3-bar-item w3-button" routerLink="/other-ticket">Autres </a>
     <br>
     <label>______________________________</label>
     <label>______________________________</label>
@@ -57,21 +52,25 @@
     </tr>
     <tr>
       <th> Attribué à </th>
-       <td><input type="text" [(ngModel)]= "NewTicket.attributedTo"  name="attributedTo" class="form-control"> </td>
+      <!-- <td><input type="text" [(ngModel)]= "NewTicket.attributedTo"  name="attributedTo" class="form-control"> </td>-->
+      <p><select (click)="getAllIdTicket()" [(ngModel)]= "NewTicket.attributedTo" name ="attributedTo" lass="form-control" >
+        <option> ----------------------------------------- </option>
+        <option  *ngFor="let item of IdList" [ngValue]="item"> {{item}}</option>
+
+      </select>  </p>
      </tr>
      <tr>
       <th> Status </th>
      <!-- <td> <input type="text" [(ngModel)]= "NewTicket.status" name="Status" class="form-control"> </td> -->
-     <p><select  [(ngModel)]= "NewTicket.status" name ="status" lass="form-control" >
+    <p><select  [(ngModel)]= "NewTicket.status" name ="status" lass="form-control" >
       <option> ----------------------------------------- </option>
        <option> pending </option>
        <option> in progress</option>
        <option>  in test</option>
        <option> resolved </option>
-
    </select>  </p>
-
      </tr>
+
      <tr>
       <th> Description </th>
        <td><input type="text" [(ngModel)]= "NewTicket.description"  name="description" class="form-control"> </td>

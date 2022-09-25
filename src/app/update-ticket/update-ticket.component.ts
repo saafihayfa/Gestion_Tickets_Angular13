@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ticket } from '../model/ticket.model';
+import {user} from '../model/user.model'
 import { AllticketsService } from '../services/alltickets.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -13,6 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UpdateTicketComponent implements OnInit {
 
  spectick = new ticket  () ;
+ IdList: Array<user> = [];
 
 
   constructor(private AllticketsService: AllticketsService,
@@ -30,13 +32,22 @@ export class UpdateTicketComponent implements OnInit {
   modifticket() {
     this.AllticketsService.modifierTicket(this.spectick)
     .subscribe( t=> {
-    this.router.navigate(['alltickets']);
     alert ("ticket modifié ");
     console.log(t);
+    this.router.navigate(['alltickets']);
     },
     err => { alert("Problème lors de la modification !");}
     );
     }
+
+    getAllIdTicket(){
+      this.AllticketsService.listerId().subscribe(id=>{
+         console.log(id);
+         this.IdList= id;
+
+       })
+
+     }
 
 
 }

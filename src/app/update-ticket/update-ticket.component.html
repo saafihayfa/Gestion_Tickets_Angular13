@@ -14,8 +14,13 @@
     </tr>
     <tr>
       <th> Attribué à </th>
-       <td><input type="text" [(ngModel)]= "spectick.attributedTo"   name="attributedTo" class="form-control"> </td>
-     </tr>
+       <!--<td><input type="text" [(ngModel)]= "spectick.attributedTo"   name="attributedTo" class="form-control"> </td> -->
+       <p><select (click)="getAllIdTicket()" [(ngModel)]= "spectick.attributedTo" name ="attributedTo" lass="form-control" >
+        <option> ------------------------------- </option>
+        <option  *ngFor="let item of IdList" [ngValue]="item"> {{item}}</option>
+
+      </select>  </p>
+      </tr>
      <tr>
       <th> Status </th>
       <!-- <td> <input type="text" [(ngModel)]= "spectick.status" name="Status" class="form-control"> </td> -->

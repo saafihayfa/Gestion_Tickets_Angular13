@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ticket } from '../model/ticket.model';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { user } from '../model/user.model';
 
 const httpOptions = {
   headers: new HttpHeaders( {'Content-Type': 'application/json'} )
@@ -39,6 +40,12 @@ export class AllticketsService {
       const url = `http://localhost:8087/api/updatehdkticket/${t.idTicket}` ;
       return this.http.put<ticket>(url,t, httpOptions);
         }
+
+  listerId(): Observable<user[]>{
+      const url ='http://localhost:8087/api/getAllId'
+      return this.http.get<user[]>(url);
+         }
+
 }
 
 

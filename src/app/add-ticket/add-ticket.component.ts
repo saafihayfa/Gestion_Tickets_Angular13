@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ticket } from '../model/ticket.model';
+import {user} from '../model/user.model'
 import { AllticketsService } from '../services/alltickets.service';
 
 @Component({
@@ -11,6 +12,8 @@ import { AllticketsService } from '../services/alltickets.service';
 export class AddTicketComponent implements OnInit {
 
   NewTicket = new ticket();
+  IdList: Array<user> = [];
+
 
   constructor(private AllticketsService: AllticketsService, private router : Router ) { }
 
@@ -28,6 +31,15 @@ export class AddTicketComponent implements OnInit {
     alert ("ticket ajouté ")
     this.router.navigate(['alltickets']);
     })
+    }
+
+    getAllIdTicket(){
+     this.AllticketsService.listerId().subscribe(id=>{
+        console.log(id);
+        this.IdList= id;
+
+      })
+
     }
 
 }
