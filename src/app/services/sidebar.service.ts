@@ -3,9 +3,6 @@ import { ticket } from '../model/ticket.model';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const httpOptions = {
-  headers: new HttpHeaders( {'Content-Type': 'application/json'} )
-  };
 
 @Injectable({
   providedIn: 'root'
@@ -65,7 +62,7 @@ export class SidebarService {
 
    supprimerTicket(idTicket : number){
     const url =  `http://localhost:8087/api/deletehdkticket/${idTicket}`;
-    return this.http.delete( url, httpOptions);
+    return this.http.delete( url);
     }
 
 

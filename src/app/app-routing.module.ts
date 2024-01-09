@@ -19,7 +19,7 @@ import { TestTicketComponent } from './test-ticket/test-ticket.component';
 
 const routes: Routes = [
   { path: "navbar", component: NavbarComponent },
-  {path : "navbar", component: Navbar1Component},
+  {path : "navbar1", component: Navbar1Component},
   { path: "login", component: LoginComponent},
   {path: "accueil", component : AccueilComponent},
   {path: "add-ticket", component : AddTicketComponent},

@@ -5,8 +5,6 @@ import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { user } from '../model/user.model';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { ticket } from '../model/ticket.model';
-
 
 @Component({
   selector: 'app-login',

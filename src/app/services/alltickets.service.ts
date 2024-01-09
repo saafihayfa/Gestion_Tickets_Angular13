@@ -4,9 +4,6 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { user } from '../model/user.model';
 
-const httpOptions = {
-  headers: new HttpHeaders( {'Content-Type': 'application/json'} )
-  };
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +19,12 @@ export class AllticketsService {
 
   ajouterTicket( t: ticket):Observable<ticket>{
       const url = 'http://localhost:8087/api/addhdkticket'
-      return this.http.post<ticket>(url, t, httpOptions);
+      return this.http.post<ticket>(url, t);
       }
 
   supprimerTicket(idTicket : number){
         const url =  `http://localhost:8087/api/deletehdkticket/${idTicket}`;
-        return this.http.delete( url, httpOptions);
+        return this.http.delete( url);
         }
 
   consulterTicket (idTicket: number):Observable<ticket>{
@@ -38,7 +35,7 @@ export class AllticketsService {
 
   modifierTicket(t : ticket) : Observable<ticket>{
       const url = `http://localhost:8087/api/updatehdkticket/${t.idTicket}` ;
-      return this.http.put<ticket>(url,t, httpOptions);
+      return this.http.put<ticket>(url,t);
         }
 
   listerId(): Observable<user[]>{

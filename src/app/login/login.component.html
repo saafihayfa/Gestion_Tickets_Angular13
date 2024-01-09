@@ -16,7 +16,7 @@
       <span  class="text-danger" *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required','username')"><b> *Nom Utilisateur  </b></span>
       <input formControlName="password" type="password" [(ngModel)]= "Newuser.userPwd" placeholder="Mot de Passe" name="password" autocomplete="new-password" required />
       <span  class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')"><b>*Mot de Passe</b></span>
-      <input [disabled]= "!loginForm.valid" type="submit"value="Se Connecter" name="connexion" class="btn btn-block btn-primary" (click)="auth()" >
+      <input [disabled]= "!loginForm.valid" type="submit"value="Se Connecter" name="connexion" class="btn btn-block btn-primary"  >
     </form>
 </div>
             <br>
